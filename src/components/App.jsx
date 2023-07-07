@@ -1,14 +1,25 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Custom from "./Custom";
 
 console.log("HEllo world");
 
-function App() {
+// setCounter = function (value) {   //this is the function that is called when we call setCounter
+//   if (typeof value === "function") {
+//     // I want to something else
+//     const updatedValue = value(oldValue);
+//     counter = updatedValue;
+//     rerender();
+//   } else {
+//     counter = value;
+//     rerender();
+//   }
+// }
 
-    const [counter, setCounter] = useState(0);
+function App() {
+  const [counter, setCounter] = useState(0); //start with use call hooks
 
   function addcounter() {
-    setCounter(counter + 1);
+    setCounter(oldCounterValue=>oldCounterValue+1);
   }
 
   function subcounter() {
