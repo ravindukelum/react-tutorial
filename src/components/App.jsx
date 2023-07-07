@@ -3,27 +3,21 @@ import React, { useState,useEffect } from "react";
 
 function App() {
 
-    const [count, setCount] = useState(0);
-            console.log("I was Ran",count)
-    useEffect((i)=>{
+    const[todos,setTodos]=useState([]);
 
-    },[])
-
-
-
-    function increment() {
-        setCount(count + 1);
-    }
-
-    function decrement() {  
-        setCount(count - 1);
-    }
 
   return (
     <div>
-      <h1>Counter : {count}</h1>
-      <button onClick={increment}>add conter</button>
-      <button onClick={decrement}>Sub counter</button>
+     <h1>To DO App</h1>
+     <input type="text" placeholder="Enter your task" />
+
+     <ul>
+            {todos.map(todo=>{
+                return <li>{todo}</li>
+            })}
+
+     </ul>
+
     </div>
   );
 }
