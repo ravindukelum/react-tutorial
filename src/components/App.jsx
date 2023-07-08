@@ -1,23 +1,34 @@
-import React, { useState,useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
 
 function App() {
+  const [task, setTask] = useState("");
+  const [todos, setTodos] = useState(["Buy milk", "Buy eggs"]);
 
-    const[todos,setTodos]=useState([]);
+  function createTodo() {
+    console.log(`Task value:${task}`);
 
-
+    setTodos(oldTodos=>{
+      return[...oldTodos,task]
+    })
+  }
   return (
     <div>
-     <h1>To DO App</h1>
-     <input type="text" placeholder="Enter your task" />
+      <h1>To DO App</h1>
+      <input
+        type="text"
+        placeholder="Enter your task"
+        value={task}
+        onChange={(event) => {
+          setTask(event.target.value);
+        }}
+      />
+      <button onClick={createTodo}>Create ToDo</button>
 
-     <ul>
-            {todos.map(todo=>{
-                return <li>{todo}</li>
-            })}
-
-     </ul>
-
+      <ul>
+        {todos.map((todo) => {
+          return <li>{todo}</li>;
+        })}
+      </ul>
     </div>
   );
 }
