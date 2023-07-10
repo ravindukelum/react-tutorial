@@ -1,8 +1,12 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 function User(){
     const {username}=useParams()
+
+    useEffect(()=>{
+            //fetch some data with username variable
+    },[])
     return(
         <div>
             
