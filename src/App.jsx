@@ -16,13 +16,13 @@ function App() {
               <Link to="/">Go home</Link>
             </li>
             <li>
-              <Link to="/user/ravi">use1</Link>
+              <Link to="/user/Ravi">Ravi</Link>
             </li>
             <li>
-              <Link to="/user/John">use2</Link>
+              <Link to="/user/Raju">use2</Link>
             </li>
             <li>
-              <Link to="/user/ant">use3</Link>
+              <Link to="/user/Ramu">use3</Link>
             </li>
           </ul>
         </nav>

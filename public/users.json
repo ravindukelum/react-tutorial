@@ -1,0 +1,14 @@
+{
+    "Ravi": {
+        "name":"Ravi",
+        "age": 20
+    },
+    "Raju": {
+        "name": "Raju",
+        "age": 21
+    },
+    "Ramu": {
+        "name": "Ramu",
+        "age": 22
+    }
+}
